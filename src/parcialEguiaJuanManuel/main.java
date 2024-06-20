@@ -18,65 +18,77 @@ public class main {
 		double totalCompra = 0;
 	
 		System.out.println("Bienvenido a la tienda, ¿Qué desea llevar?");
-		int respuesta=1;
+		producto1.mostrarEstado();
+		producto2.mostrarEstado();
+		producto3.mostrarEstado();
+		producto4.mostrarEstado();
+		producto5.mostrarEstado();
+		producto6.mostrarEstado();
+		
+		int respuesta=8;
+		BufferedReader aux=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Ingrese el producto");
+		respuesta=Integer.valueOf(aux.readLine());
 		while (respuesta!=0) {
 			switch (respuesta) {
-			
 			case 1: {
-				producto1.mostrarEstado();
 			    totalCompra = totalCompra + producto1.calcularDescuento();
-			
+				BufferedReader aux3=new BufferedReader(new InputStreamReader(System.in));
+				System.out.println("¿Desea agregar algún producto?");
+				respuesta=Integer.valueOf(aux3.readLine());
 			}
+			break;
 	
 			case 2: {
-				producto2.mostrarEstado();
 				totalCompra = totalCompra + producto2.calcularDescuento();
-
+				BufferedReader aux3=new BufferedReader(new InputStreamReader(System.in));
+				System.out.println("¿Desea agregar algún producto?");
+				respuesta=Integer.valueOf(aux3.readLine());
 			}
+			break;
 	
 			case 3: {
-				producto3.mostrarEstado();
 				totalCompra = totalCompra + producto3.calcularDescuento();
-
+				BufferedReader aux3=new BufferedReader(new InputStreamReader(System.in));
+				System.out.println("¿Desea agregar algún producto?");
+				respuesta=Integer.valueOf(aux3.readLine());
 			}
+			break;
 	
 			case 4: {
-				producto4.mostrarEstado();
 				totalCompra = totalCompra + producto4.calcularDescuento();
-
+				BufferedReader aux3=new BufferedReader(new InputStreamReader(System.in));
+				System.out.println("¿Desea agregar algún producto?");
+				respuesta=Integer.valueOf(aux3.readLine());
 			}
+			break;
 	
 			case 5:{
-				producto5.mostrarEstado();
 				totalCompra = totalCompra + producto5.calcularDescuento();
-
+				BufferedReader aux3=new BufferedReader(new InputStreamReader(System.in));
+				System.out.println("¿Desea agregar algún producto?");
+				respuesta=Integer.valueOf(aux3.readLine());
 			}
+			break;
 
 			case 6:{
-				producto6.mostrarEstado();
 				totalCompra = totalCompra + producto6.calcularDescuento();
-
+				BufferedReader aux3=new BufferedReader(new InputStreamReader(System.in));
+				System.out.println("¿Desea agregar algún producto?");
+				respuesta=Integer.valueOf(aux3.readLine());
 			}
+			break;
 			case 0: {
 				System.out.println("Presione 0 para finalizar compra");
 			}
-		
-			BufferedReader aux=new BufferedReader(new InputStreamReader(System.in));
-			System.out.println("¿Desea agregar algún producto?");
-			respuesta=Integer.valueOf(aux.readLine());
+			break;
+			default:
+			BufferedReader aux2=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Ingrese una opción válida");
+			respuesta=Integer.valueOf(aux2.readLine());
+			break;
 			}
-			
 		}
-		
 		System.out.println("El total de la compra es de $ " + totalCompra);
-	
-	
-		
-
-		
-		
-
-
 	}
-
 }
